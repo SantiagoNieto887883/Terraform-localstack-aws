@@ -127,44 +127,8 @@ aws --endpoint-url=http://localhost:4566 s3 cp ./imagenes/ s3://test-bucket-loca
 aws --endpoint-url=http://localhost:4566 s3 ls s3://test-bucket-local/images/
 ```
 
-## Ver la app
+## Ver la app y confirma el contenido de imagenes
 
 Abre:
 
 http://localhost:8080
-
-```bash
-```
-
-```bash
-```
-
-```bash
-```
-
-```bash
-```
-
-```bash
-```
-
-```bash
-```
-
-```bash
-```
-
-```bash
-```
-
-```bash
-```
-
-```bash
-```
-
-```bash
-```
-
-```bash
-```
