@@ -35,6 +35,7 @@ exit
 
 ## Comandos de despliegue
 
+Verifica los prerrequisitos en ...
 
 # DEV
 ```bash
