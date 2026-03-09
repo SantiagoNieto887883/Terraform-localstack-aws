@@ -35,7 +35,9 @@ exit
 
 ## Comandos de despliegue
 
-Verifica los prerrequisitos en ...
+Verifica los prerrequisitos en:
+
+https://github.com/SantiagoNieto887883/Terraform-localstack-aws/tree/main/IAC/Terraform
 
 # DEV
 ```bash
