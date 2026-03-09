@@ -1,5 +1,11 @@
 <h1>Local stack y terraform<h1/>
 
+# Antes de inciar
+
+** Instala AWS CLI
+
+** Instala terraform
+
 ## 1) levanta ambiente localstack en docker
 
 Ejecuta el siguiente comando, esto levanta el ambiente con el documento compose
@@ -32,6 +38,57 @@ awslocal ec2 describe-security-groups
 exit
 
 ```
+
+# Authentication
+
+Debes autenticarte con tus credenciales de AWS (SSO o Secret key, access key) (usa las de localstack)
+
+```bash
+aws configure --profile <tu perfil>
+
+o
+
+aws configure sso --profile <tu perfil>
+
+```
+
+El comando anterior te debe solicitar los valores de Secret key, access key.
+
+Si utilizas SSO consulta en llaves de inicio de sesion los valores: (URL SSO, REGION)
+
+---
+
+## (SOLO PARA AMBIENTE LOCALSTACK)
+
+Antes de correr terraform init
+
+En Git Bash, deja limpias las credenciales así:
+
+```bash
+export AWS_ACCESS_KEY_ID=test
+export AWS_SECRET_ACCESS_KEY=test
+export AWS_DEFAULT_REGION=us-east-1
+unset AWS_SESSION_TOKEN
+unset AWS_PROFILE
+```
+Ese AWS_SESSION_TOKEN a veces rompe todo aunque access_key y secret estén bien.
+
+Puedes validarlo con:
+
+Ese AWS_SESSION_TOKEN a veces rompe todo aunque access_key y secret estén bien.
+
+```bash
+env | grep AWS
+```
+
+Deberías ver algo simple, idealmente solo:
+
+```bash
+AWS_ACCESS_KEY_ID=test
+AWS_SECRET_ACCESS_KEY=test
+AWS_DEFAULT_REGION=us-east-1
+```
+---
 
 ## Comandos de despliegue
 
