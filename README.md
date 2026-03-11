@@ -40,12 +40,12 @@ curl http://localhost:4566/_localstack/health
 Entra a la instancia para probrar comandos de localstack
 
 ```bash
-docker exec terraform-localstack-aws-localstack-1 sh -lc "awslocal ec2 describe-security-groups"
+docker exec terraform-localstack-aws-s3-localstack-1 sh -lc "awslocal ec2 describe-security-groups"
 ```
 O
 
 ```bash
-docker exec -it terraform-localstack-aws-localstack-1 sh
+docker exec -it terraform-localstack-aws-s3-localstack-1 sh
 
 #y
 
